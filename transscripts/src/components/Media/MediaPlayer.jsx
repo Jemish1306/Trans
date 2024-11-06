@@ -387,38 +387,61 @@ const MediaPlayer = () => {
         </div>
 
         <div className="flex justify-between items-center w-full">
-          <span className="text-xs font-semibold">{formatTime(currentTime)}</span>
-          <div className="flex items-center space-x-4 justify-center">
-            <button onClick={togglePlayPause} className="w-6 h-6 hover:bg-black hover:text-textcolor rounded-full flex items-center justify-center">
-              {isPlaying ? <FaPause /> : <FaPlay />}
-            </button>
-            <button onClick={() => (mediaRef.current.currentTime -= 10)} className="w-6 h-6 hover:bg-black hover:text-textcolor rounded-full flex items-center justify-center">
-              <FaUndo />
-            </button>
-            <button onClick={() => (mediaRef.current.currentTime += 10)} className="w-6 h-6 hover:bg-black hover:text-textcolor rounded-full flex items-center justify-center">
-              <FaRedo />
-            </button>
-            <button className="w-6 h-6 hover:bg-black hover:text-textcolor rounded-full flex items-center justify-center">
-              <FaVolumeUp />
-            </button>
-            <button onClick={changePlaybackRate} className="w-6 h-6 hover:bg-black hover:text-textcolor rounded-full flex items-center justify-center">
-              {playbackRate}x
-            </button>
-            <button onClick={handleDownload} className="w-6 h-6 hover:bg-black hover:text-textcolor rounded-full flex items-center justify-center">
-              <FaDownload />
-            </button>
-            <label className="w-6 h-6 hover:bg-black hover:text-textcolor rounded-full cursor-pointer flex items-center justify-center">
-              <FaUpload />
-              <input
-                type="file"
-                accept=".mp3, .mp4"
-                className="hidden"
-                onChange={handleMediaUpload}
-              />
-            </label>
-          </div>
-          <span className="text-xs font-semibold">{formatTime(duration)}</span>
-        </div>
+  <span className="text-xs md:text-sm font-semibold">{formatTime(currentTime)}</span>
+  
+  {/* Icon Container */}
+  <div className="flex items-center justify-center space-x-4 sm:space-x-2 flex-wrap gap-y-2">
+    <button 
+      onClick={togglePlayPause} 
+      className="w-6 h-6 md:w-8 md:h-8 hover:bg-black hover:text-textcolor rounded-full flex items-center justify-center"
+    >
+      {isPlaying ? <FaPause /> : <FaPlay />}
+    </button>
+    <button 
+      onClick={() => (mediaRef.current.currentTime -= 10)} 
+      className="w-6 h-6 md:w-8 md:h-8 hover:bg-black hover:text-textcolor rounded-full flex items-center justify-center"
+    >
+      <FaUndo />
+    </button>
+    <button 
+      onClick={() => (mediaRef.current.currentTime += 10)} 
+      className="w-6 h-6 md:w-8 md:h-8 hover:bg-black hover:text-textcolor rounded-full flex items-center justify-center"
+    >
+      <FaRedo />
+    </button>
+    <button 
+      className="w-6 h-6 md:w-8 md:h-8 hover:bg-black hover:text-textcolor rounded-full flex items-center justify-center"
+    >
+      <FaVolumeUp />
+    </button>
+    <button 
+      onClick={changePlaybackRate} 
+      className="w-6 h-6 md:w-8 md:h-8 hover:bg-black hover:text-textcolor rounded-full flex items-center justify-center"
+    >
+      {playbackRate}x
+    </button>
+    <button 
+      onClick={handleDownload} 
+      className="w-6 h-6 md:w-8 md:h-8 hover:bg-black hover:text-textcolor rounded-full flex items-center justify-center"
+    >
+      <FaDownload />
+    </button>
+    <label 
+      className="w-6 h-6 md:w-8 md:h-8 hover:bg-black hover:text-textcolor rounded-full cursor-pointer flex items-center justify-center"
+    >
+      <FaUpload />
+      <input
+        type="file"
+        accept=".mp3, .mp4"
+        className="hidden"
+        onChange={handleMediaUpload}
+      />
+    </label>
+  </div>
+
+  <span className="text-xs md:text-sm font-semibold">{formatTime(duration)}</span>
+</div>
+
       </div>
     </div>
   );
