@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+/* src/index.css
+.ck-editor__editable_inline {
+    @apply border border-gray-300 rounded-lg p-4 bg-gray-50;
+    min-height: 300px;
+  } */
+  
