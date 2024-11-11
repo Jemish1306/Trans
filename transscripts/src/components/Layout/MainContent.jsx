@@ -180,7 +180,7 @@
 
 
 
-// src/components/Layout2/MainContent.jsx
+
 import React, { useState } from 'react';
 import { FaUndo, FaRedo, FaFont, FaSearch, FaKeyboard, FaSave } from 'react-icons/fa';
 import Transcript from './Transcript';
@@ -191,7 +191,7 @@ import KeyboardShortcutModal from './../Model/KeyboardShortcutModal';
 import DownloadModal from './../Model/DownloadModal';
 import AddCollaborator from '../Model/AddCollaborator';
 import RatingModal from './../Model/RatingModal';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
 const MainContent = () => {
   const [activeModal, setActiveModal] = useState(null);
@@ -337,4 +337,6 @@ const MainContent = () => {
 };
 
 export default MainContent;
+
+
 
